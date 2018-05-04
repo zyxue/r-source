@@ -68,6 +68,7 @@ p.adjust <- function(p, method = p.adjust.methods, n = length(p))
 		   pmin(1, cummin( (n - i + 1L) * p[o] ))[ro]
 	       },
 	       BH = {
+		   # checked the calculation is consistent with the description at https://youtu.be/K8LQSvtjcEo?t=15m6s
 		   i <- lp:1L
 		   o <- order(p, decreasing = TRUE)
 		   ro <- order(o)
